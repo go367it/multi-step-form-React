@@ -26,7 +26,7 @@ const Page3 = () => {
       };
       localStorage.setItem("loginPage3", JSON.stringify(formData));
     }
-  }, {});
+  },[]);
 
   const updateLocalStorage = (value, field) => {
     let formData = JSON.parse(localStorage.getItem("loginPage3"));
