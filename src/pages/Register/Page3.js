@@ -69,7 +69,7 @@ const Page3 = () => {
     cogoToast.success("Thanks for your Response",{ position: 'bottom-center', heading: 'Submitted Successfully!' })
     localStorage.clear()
     setTimeout(()=>{
-      window.location = '/'
+      window.location = '/multi-step-form-React/'
       //code goes here
    }, 2000)
   }
