@@ -67,6 +67,11 @@ const Page3 = () => {
 
   const submitForm = () =>{
     cogoToast.success("Thanks for your Response",{ position: 'bottom-center', heading: 'Submitted Successfully!' })
+    localStorage.clear()
+    setTimeout(()=>{
+      window.location = '/'
+      //code goes here
+   }, 2000)
   }
 
   const prev = () => {
@@ -142,13 +147,13 @@ const Page3 = () => {
             </div>
             <div className="d-grid gap-2 d-md-flex justify-content-md-end">
               <button
-                className="btn btn-primary me-md-2"
+                className="btn btn-outline-dark me-md-2"
                 onClick={() => prev()}
                 type="button"
               >
                 Prev
               </button>
-              <button onClick={()=>submitForm()} className="btn btn-primary" type="button">
+              <button onClick={()=>submitForm()} className="btn btn-dark" type="button">
                 Submit
               </button>
             </div>

@@ -146,7 +146,7 @@ const Page1 = () => {
             <div className="d-flex justify-content-end">
               <button
                 type="button"
-                className="btn btn-primary"
+                className="btn btn-dark"
                 onClick={() => next()}
               >
                 Next

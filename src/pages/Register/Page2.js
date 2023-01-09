@@ -170,14 +170,14 @@ const Page2 = () => {
 
             <div className="d-grid gap-2 d-md-flex justify-content-md-end">
               <button
-                className="btn btn-primary me-md-2"
+                className="btn btn-outline-dark me-md-2"
                 onClick={() => prev()}
                 type="button"
               >
                 Prev
               </button>
               <button
-                className="btn btn-primary"
+                className="btn btn-dark"
                 onClick={() => next()}
                 type="button"
               >
