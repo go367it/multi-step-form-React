@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import LoginContext from "../../context/LoginContext";
 import Slide from "react-reveal/Slide";
+import cogoToast from "cogo-toast";
 
 const Page3 = () => {
   const { prevPage } = useContext(LoginContext);
@@ -63,6 +64,10 @@ const Page3 = () => {
       updateLocalStorage(e.target.value, e.target.id);
     }
   };
+
+  const submitForm = () =>{
+    cogoToast.success("Thanks for your Response",{ position: 'bottom-center', heading: 'Submitted Successfully!' })
+  }
 
   const prev = () => {
     prevPage();
@@ -143,7 +148,7 @@ const Page3 = () => {
               >
                 Prev
               </button>
-              <button className="btn btn-primary" type="button">
+              <button onClick={()=>submitForm()} className="btn btn-primary" type="button">
                 Submit
               </button>
             </div>

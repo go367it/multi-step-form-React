@@ -49,7 +49,7 @@ const Homepage = () => {
     <div className="p-4 d-flex justify-content-center">
       <div className="w-100">
         <div className="w-100 d-flex justify-content-center">
-          <div className="card w-50">
+          <div className="card w-100">
             <div className="card-body">
               <div className="d-flex justify-content-center">
                 <h5 className="card-title">Register</h5>
