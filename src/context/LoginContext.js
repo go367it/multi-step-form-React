@@ -21,7 +21,7 @@ export const LoginProvider = ({ children }) => {
   };
 
   return (
-    <LoginContext.Provider value={{ loginPage, nextPage, prevPage }}>
+    <LoginContext.Provider value={{ loginPage, nextPage, prevPage, setLoginPage }}>
       {children}
     </LoginContext.Provider>
   );

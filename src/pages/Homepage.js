@@ -5,10 +5,12 @@ import Page2 from "./Register/Page2";
 import Page3 from "./Register/Page3";
 
 const Homepage = () => {
-  const { loginPage } = useContext(LoginContext);
+  const { loginPage , setLoginPage} = useContext(LoginContext);
 
   useEffect(() => {
+    // checking the localStorage for previuos session data
     if (!localStorage.getItem("loginPage1")) {
+      // creating a cookie for storing the new session data for page1
       console.log("present");
       const formData = {
         firstname: "",
@@ -20,6 +22,26 @@ const Homepage = () => {
       localStorage.setItem("loginPage1", JSON.stringify(formData));
     } else {
       console.log(localStorage.getItem("loginPage1"));
+    }
+
+    // checking for form time 
+    if (!localStorage.getItem("formTime")) {
+      // creating a form time if it's not there
+      const createdAt = new Date().getTime().toString();
+      localStorage.setItem("formTime", JSON.stringify(createdAt));
+    }
+    else{
+
+      if(localStorage.getItem('loginPage3')){
+        setLoginPage(3)
+      }
+      else if(localStorage.getItem('loginPage2')){
+        setLoginPage(2)
+      }
+      else{
+        setLoginPage(1)
+      }
+
     }
   }, []);
 

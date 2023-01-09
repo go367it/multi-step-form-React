@@ -10,6 +10,7 @@ function App() {
       <LoginProvider>
         <AppNavbar />
         <Routes>
+          <Route path="/multi-step-form-React/" element={<Homepage />} />
           <Route path="/" element={<Homepage />} />
         </Routes>
       </LoginProvider>
